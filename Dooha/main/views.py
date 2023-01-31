@@ -29,11 +29,11 @@ def fav_games(request : HttpRequest):
 
 def random_password(request :HttpRequest):
     
-    # get random string of length 6 without repeating letters
-    result_str = ''.join(random.sample(string.ascii_lowercase, 8))
+
+    result = ''.join(random.sample(string.ascii_lowercase, 8))
     context = {
         
-        "password" : result_str
+        "password" : result
 
     }
     return render(request , "main/password.html",context)
