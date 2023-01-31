@@ -12,6 +12,19 @@
     <h1>My Favourit Games are:</h1>
     <p>{{ myFavGames }}</p>
    
+    <ol>
+        <li>{{myFavGames.0}}</li>
+        <li>{{myFavGames.1}}</li>
+        <li>{{myFavGames.2}}</li>
+    </ol>
+    <ol>
+    {% for item in myFavGames %}
+    <tr>
+      <td> <li>{{item}}</li></td>
+    </tr>
+    {% endfor %}
+    </ol>
+        
 </body>
 
 </html>
