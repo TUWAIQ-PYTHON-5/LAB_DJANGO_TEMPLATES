@@ -16,8 +16,10 @@ def today_date(request : HttpRequest):
 def random_pass(request :HttpRequest):
     
     # get random string of length 6 without repeating letters
-    result_str = ''.join(random.sample(string.ascii_lowercase, 8))
-    context = {"password" : result_str
+    result_str = ''.join(random.sample(string.ascii_letters.upper(), 2))
+    result_num = ''.join(random.sample(string.digits,6))
+    result = result_str+result_num
+    context = {"password" : result
 
     }
     return render(request , "myFun/randompass.html",context)
