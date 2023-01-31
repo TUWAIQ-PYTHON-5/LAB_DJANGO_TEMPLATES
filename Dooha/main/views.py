@@ -17,13 +17,8 @@ def today_date(request : HttpRequest):
 
 
 def fav_games(request : HttpRequest):
-    list_game = ["God of War (PlayStation Hits)" , "Horizon Forbidden West ","Call of Duty: Modern Warfare II"]
-    context = {
-    
-        "list_game": list_game
-
-    }
-    return render( request , "main/fav_games.html", context )
+   
+    return render( request , "main/fav_games.html" )
 
 
 
